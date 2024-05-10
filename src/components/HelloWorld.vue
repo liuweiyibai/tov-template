@@ -1,9 +1,15 @@
 <script setup lang="ts">
+import MockService from '~/api/mock';
+
 defineProps<{ msg: string }>()
 
-const visits = useVisits()
+
 
 const { t } = useI18n()
+
+onMounted(async () => {
+	await MockService.mockGet()
+})
 </script>
 
 <template>
@@ -27,7 +33,7 @@ const { t } = useI18n()
 		</p>
 		<p class="read-the-docs">
 			{{ t('The total number of views is') }}
-			<span class="text-gray-800" dark="text-gray-300">{{ visits ?? 0 }}</span>
+			<span class="text-gray-800" dark="text-gray-300">{{ 0 }}</span>
 		</p>
 	</div>
 </template>

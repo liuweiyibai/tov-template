@@ -1,6 +1,17 @@
-import { useRequest } from 'vue-request'
 
-export const testRequest = () => {
-	const { data, loading, error } = useRequest(() => http.post('/mock/post'))
-	return { data, loading, error }
+
+import { ApiResponse } from '@/types/axios';
+import axios from '~/utils/axios';
+
+
+class MockService {
+
+	static mockGet<T = any>() {
+		return axios<ApiResponse<T>>({
+			url: '/mock/get',
+			method: 'get',
+		})
+	}
 }
+
+export default MockService

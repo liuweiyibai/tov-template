@@ -387,25 +387,10 @@ export default [
 ] as MockMethod[];
 ```
 
-在 `src` 中就可以进行模拟请求。
+ 
 
-```html
-<script setup lang="ts">
-	import { useRequest } from 'vue-request'
-	// 请求接口 /api/get
-	const { data, loading, error } = useRequest('/api/mock/get')
-</script>
-
-<template>
-	<div>data: {{data}}</div>
-	<div>loading: {{loading}}</div>
-	<div>error: {{error}}</div>
-</template>
-```
-
-这里用到 [vue-request](https://cn.attojs.org/) 去做请求，不过因为该 `mock`
-拦截的是一整个接口，所以换成 `axios` 等请求库也是可以的。
-
+ 
+ 
 更多 `mock` 设置可见 👉
 [vite-plugin-mock](https://github.com/vbenjs/vite-plugin-mock)
 

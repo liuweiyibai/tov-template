@@ -10,7 +10,7 @@
   "files.associations": {
     "*.css": "css"
   },
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "css.lint.unknownAtRules": "ignore",
   // 开启 eslint
   "eslint.enable": true,
@@ -51,12 +51,13 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[plaintext]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
-  }
+  },
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
